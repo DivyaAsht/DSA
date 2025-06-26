@@ -1,0 +1,505 @@
+*****
+*****
+*****
+*****
+*****
+public class Main {
+    public static void main(String[] args) {
+        int n =5;
+        for(int i=0;i<n;i++) {
+            for(int j=0;j<n;j++) {
+                    System.out.print("*");             
+            }
+            System.out.println();
+        }
+    }
+}
+*
+**
+***
+****
+*****
+public class Main {
+    public static void main(String[] args) {
+        int n=5;
+        for(int i=0;i<n;i++){
+            for(int j=0;j<=i;j++){
+                System.out.print("*");
+
+            }
+            System.out.println();
+        }
+    }
+}
+1
+12
+123
+1234
+12345
+public class Main {
+    public static void main(String[] args) {
+        int n=5;
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print(j);
+
+            }
+            System.out.println();
+        }
+    }
+}
+1
+22
+333
+4444
+55555
+public class Main {
+      public static void main(String[] args) {
+        int n=5,k;
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=i;j++){
+                 System.out.print(i);
+            }
+            System.out.println();
+        }
+    }
+}
+*****
+****
+***
+**
+*
+public class Main {
+public static void main(String[] args) {
+        int n=1,k;
+        for(int i=5;i>=n;i--){
+            for(int j=1;j<=i;j++){
+                 System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+12345
+1234
+123
+12
+1
+public class Main {
+public static void main(String[] args) {
+        int n=1,k;
+        for(int i=5;i>=n;i--){
+            for(int j=1;j<=i;j++){
+                 System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+}
+    *    
+   ***   
+  *****  
+ ******* 
+*********
+public class Main {
+public static void main(String[] args) {
+        int n=5;
+        for(int i=0;i<n;i++){
+            //space
+            for(int j=0;j<n-i-1;j++){
+                 System.out.print(" ");}
+            //star
+            for(int k=0;k<2*i+1;k++){
+                 System.out.print("*");}
+            //space     
+            for(int j=0;j<n-i-1;j++){
+                 System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+}
+*********
+ ******* 
+  *****  
+   ***   
+    *    
+public class Main {
+public static void main(String[] args) {
+        int n=5;
+        for(int i=0;i<n;i++){
+            //space
+            for(int j=0;j<i;j++){
+                 System.out.print(" ");}
+            //star
+            for(int j=0;j<2*n-(2*i+1);j++){
+                 System.out.print("*");}
+            //space     
+            for(int j=0;j<i;j++){
+                 System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+}
+    *    
+   ***   
+  *****  
+ ******* 
+*********
+*********
+ ******* 
+  *****  
+   ***   
+    *    
+public class Main
+{
+	public static void main(String[] args) {
+	    int n=5;
+	    for(int i=0;i<n;i++){
+	        for(int j=0;j<n-i-1;j++){
+	            System.out.print(" ");
+	        }
+	        for(int k=0;k<2*i+1;k++){
+	            System.out.print("*");
+	        }
+	        for(int j=0;j<n-i-1;j++){
+	            System.out.print(" ");
+	        }
+		System.out.println("");
+	}
+	for(int i=0;i<n;i++){
+	        for(int j=0;j<i;j++){
+	            System.out.print(" ");
+	        }
+	        for(int j=0;j<2*n-(2*i+1);j++){
+	            System.out.print("*");
+	        }
+	        for(int j=0;j<i;j++){
+	            System.out.print(" ");
+	        }
+		System.out.println("");
+	}
+	
+}
+}
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+public class Main
+{
+	public static void main(String[] args) {
+	    int n=5;
+	    for(int i=1;i<=(2*n)-1;i++){
+	        for(int j=1;j<=i;j++){
+	            if(i>=6)
+	            break;
+                System.out.print("*");
+	        }
+	        System.out.println("");
+	        if(i>=5){
+	        for(int k=1;k<(2*n)-i;k++){
+	            System.out.print("*");
+	        }
+	            
+	        }
+	    }
+	}
+}
+1
+01
+101
+0101
+10101
+    public class Main
+    {
+    	public static void main(String[] args) {
+    	    int n=5,start;
+    	    for(int i=1;i<=n;i++){
+    	        if(i%2==0)
+    	            start=0;
+    	        else
+    	            start=1;
+    	        for(int j=0;j<i;j++){
+    	            System.out.print(start);
+    	            start=1-start;
+    	        }
+    	        System.out.println("");
+    	    }
+    	}
+    }
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+11 12 13 14 15 
+    public class Main
+    {
+    	public static void main(String[] args) {
+    	    int n=5,start=0;
+    	    for(int i=1;i<=n;i++){
+    	        for(int j=0;j<i;j++){
+    	            start=start+1;
+    	            System.out.print(start+" ");
+    	          
+    	        }
+    	        System.out.println("");
+    	    }
+    	}
+    }
+1      1
+12    21
+123  321
+12344321
+    public class Main
+    {
+    	public static void main(String[] args) {
+    	    int n=4,start;
+    	    for(int i=1;i<=n;i++){
+    	        for(int j=1;j<=i;j++){
+    	            System.out.print(j);}
+    	        for(int k=1;k<=(2*n)-(2*i);k++){
+    	            System.out.print(" ");
+    	        }
+    	        start=i;
+    	        for(int j=1;j<=i;j++){
+    	            
+    	            while(start>0){
+    	                System.out.print(start);
+    	                start--;
+    	            }
+    	   }
+    	         System.out.println(""); 
+    	        }
+    	    }
+    	}
+A
+AB
+ABC
+ABCD
+ABCDE
+    public class Main
+    {
+    	public static void main(String[] args) {
+    	    int n=5;
+    	    for(int i=0;i<n;i++){
+    	        for(char ch='A';ch<='A'+i;ch++){
+    	            System.out.print(ch);}
+    	        System.out.println("");
+    	            }
+    	   }
+}
+ABCDE
+ABCD
+ABC
+AB
+A
+    public class Main
+    {
+    	public static void main(String[] args) {
+    	    int n=0;
+    	    for(int i=4;i>=n;i--){
+    	        for(char ch='A';ch<='A'+i;ch++){
+    	            System.out.print(ch);}
+    	        System.out.println("");
+    	            }
+    	   }
+}
+A
+BB
+CCC
+DDDD
+EEEEE
+    public class Main
+    {
+    	public static void main(String[] args) {
+    	    char n='E';
+    	    for(char c='A';c<=n;c++){
+    	        for(char ch='A';ch<=c;ch++){
+    	            System.out.print(c);}
+    	        System.out.println("");
+    	            }
+    	   }
+}
+    A    
+   ABA   
+  ABCBA  
+ ABCDCBA 
+ABCDEDCBA
+public class Main
+{
+	public static void main(String[] args) {
+	    int n =5;
+	    for(int i=0;i<n;i++){
+	        for(int j=0;j<n-i-1;j++){
+	            System.out.print(" ");
+	        }
+	        char ch='A';
+	        for(int k=1;k<=2*i+1;k++){
+	            System.out.print(ch);
+	            if(k<=(2*i+1)/2)
+	                ch++;
+	            else
+	                ch--;
+	        }
+	        for(int j=0;j<n-i-1;j++){
+	            System.out.print(" ");
+	        }
+		System.out.println("");
+	}
+}
+}
+E
+DE
+CDE
+BCDE
+ABCDE
+
+public class Main
+{
+	public static void main(String[] args) {
+	    int n = 5;
+	    for(int i=0;i<n;i++){
+	        for(char ch='E'-i;ch<='E';ch++){
+	            System.out.print(ch);
+	        }
+	        
+	    }
+		System.out.println("");
+	}
+}
+**********
+****  ****
+***    ***
+**      **
+*        *
+*        *
+**      **
+***    ***
+****  ****
+**********
+public class Main
+{
+	public static void main(String[] args) {
+	    int n = 0;
+	    for(int i=5;i>n;i--){
+	        for(int j=1;j<=i;j++){
+	            System.out.print("*");
+	        }
+	        for(int k=0;k<10-i*2;k++){
+	            System.out.print(" ");
+	        }
+	        for(int j=1;j<=i;j++){
+	            System.out.print("*");
+	        }
+	        System.out.println("");
+	    }
+	    n = 5;
+	    for(int i=1;i<=n;i++){
+	        for(int j=1;j<=i;j++){
+	            System.out.print("*");
+	        }
+	        for(int k=0;k<(2*n)-(2*i);k++){
+	            System.out.print(" ");
+	        }
+	        for(int j=1;j<=i;j++){
+	            System.out.print("*");
+	        }
+	        System.out.println("");
+	    }
+	}
+}
+*        *
+**      **
+***    ***
+****  ****
+**********
+****  ****
+***    ***
+**      **
+*        *
+public class Main
+{
+	public static void main(String[] args) {
+		int n = 5;
+	    for(int i=1;i<=n;i++){
+	        for(int j=1;j<=i;j++){
+	            System.out.print("*");
+	        }
+	        for(int k=0;k<(2*n)-(2*i);k++){
+	            System.out.print(" ");
+	        }
+	        for(int j=1;j<=i;j++){
+	            System.out.print("*");
+	        }
+	        System.out.println("");
+	    }
+	    
+	    n=4;
+	    for(int i=0;i<n;i++){
+	    for(int j=1;j<=n-i;j++){
+	            System.out.print("*");
+	        }
+	        for(int k=0;k<i*2+2;k++){
+	            System.out.print(" ");
+	        }
+	        for(int j=1;j<=n-i;j++){
+	            System.out.print("*");
+	        }
+	        System.out.println("");
+	    }
+	    
+	}
+}
+****
+*  *
+*  *
+****
+public class Main
+{
+	public static void main(String[] args) {
+		int n = 4;
+	    for(int i=0;i<n;i++){
+	        for(int j=0;j<n;j++){
+	            if(i==0||i==n-1||j==0||j==n-1)
+	                System.out.print("*");
+	            else
+	                System.out.print(" ");
+	        }
+	    System.out.println("");
+
+	    }
+	}
+}
+4 4 4 4 4 4 4 
+4 3 3 3 3 3 4 
+4 3 2 2 2 3 4 
+4 3 2 1 2 3 4 
+4 3 2 2 2 3 4 
+4 3 3 3 3 3 4 
+4 4 4 4 4 4 4 
+public class Main {
+    public static void main(String[] args) {
+        int n = 4;
+        int size = 2 * n - 1;
+
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                int top = i;
+                int left = j;
+                int right = size - 1 - j;
+                int down = size - 1 - i;
+                
+                int min = Math.min(Math.min(top, down), Math.min(left, right));
+                System.out.print((n - min) + " ");
+            }
+            System.out.println(); 
+        }
+    }
+}
