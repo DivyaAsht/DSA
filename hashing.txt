@@ -1,0 +1,200 @@
+1)without integer hashing
+
+import java.util.Scanner;
+public class Main
+{
+    public static int count(int arr[], int num){
+        int c=0;
+        for(int i=0;i<arr.length;i++){
+            if(num==arr[i])
+            c++;
+        }
+        return c;
+    }
+	public static void main(String[] args) {
+	    
+	    Scanner sc = new Scanner(System.in);
+	    int arr[]={2,1,4,1,2};
+	    
+		System.out.println("Enter how many numbers u want to check : ");
+		int size = sc.nextInt();
+		
+		for(int i=0;i<size;i++){
+		    int num=sc.nextInt();
+		    
+		    int freq=count(arr,num);
+		    System.out.println(freq);
+		}
+		}
+	}
+
+2) integer hashing
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    //input array from user
+	    Scanner sc = new Scanner(System.in);
+		System.out.println("Enter how many numbers u want to check : ");
+		int size = sc.nextInt();
+		
+		int arr[]=new int[size];
+		for(int i=0;i<size;i++){
+		     arr[i]=sc.nextInt();
+		}
+		
+		//declare hash array
+		int hash[]=new int[13];
+		for(int i=0;i<size;i++){
+		    hash[arr[i]]++;
+		}
+		
+		//take number as an ip
+		int ip=sc.nextInt();
+		for(int i=0;i<ip;i++){
+		    int num=sc.nextInt();
+		    System.out.println(hash[num]);
+		}
+	}
+}
+
+3)without character hashing
+
+import java.util.Scanner;
+public class Main
+{
+    public static int count(String str, char c){
+        int cnt=0;
+        for(int i=0;i<str.length();i++){
+            if(c==str.charAt(i))
+            cnt++;
+        }
+        return cnt;
+    }
+	public static void main(String[] args) {
+	    
+	    Scanner sc = new Scanner(System.in);
+	    String str = "madam";
+	    
+		System.out.println("Enter how many characters u want to check : ");
+		int size = sc.nextInt();
+		
+		for(int i=0;i<size;i++){
+		    char c = sc.next().charAt(0);
+		    
+		    int freq=count(str,c);
+		    System.out.println(freq);
+		}
+		}
+	}
+
+4) character hashing
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    //input string from user
+	    Scanner sc = new Scanner(System.in);
+	    String str=sc.next();
+		
+		
+		//declare hash array
+		int hash[]=new int[26];
+		int n='a';
+		for(int i=0;i<str.length();i++){
+		    hash[str.charAt(i)-n]++;
+
+		}
+		
+		//take characters as an ip
+		System.out.println("Enter how many characters u want to check : ");
+		int ip=sc.nextInt();
+		for(int i=0;i<ip;i++){
+		    char c=sc.next().charAt(0);
+		    System.out.println(hash[c-n]);
+		}
+	}
+}
+
+5)hashmap
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+
+		//taking array as an ip
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of an array : ");
+		int n = sc.nextInt();
+		int arr[]=new int[n];
+		System.out.println("Enter values for an array : ");
+		for(int i=0; i<n; i++) {
+			arr[i]=sc.nextInt();
+		}
+
+		//declare hashmap array
+		Map<Integer,Integer> map=new HashMap<>();
+		for(int i=0; i<n; i++) {
+			map.put(arr[i],map.getOrDefault(arr[i],0)+1);//This checks if the number arr[i] already exists in the map. exists If yes, it returns the current count. the current count or takes default value 0
+		}
+
+		//take numbers as an ip
+		System.out.println("Enter how many numbers u want to check : ");
+		int ip=sc.nextInt();
+		System.out.println("Enter values for numbers : ");
+		for(int i=0; i<ip; i++) {
+			int num=sc.nextInt();
+			System.out.println(map.getOrDefault(num,0));
+		}
+	}
+}
+
+6)Find the highest/lowest frequency element
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    //input array from user
+	    Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of an array : ");
+		int size = sc.nextInt();
+		int arr[]=new int[size];
+		System.out.println("Enter values for an array : ");
+		for(int i=0;i<size;i++){
+		     arr[i]=sc.nextInt();
+		}
+		
+		//declare hash array
+		int hash[]=new int[13];
+		for(int i=0;i<size;i++){
+		    hash[arr[i]]++;
+		}
+		
+		//count maximum frequency
+		int max=0;
+		int maxel=-1;
+		for(int i=0;i<hash.length;i++){
+		    if(hash[i]>max){
+		        max=hash[i];
+		        maxel=i;
+		    }
+		}
+        System.out.println("Element with highest frequency: " + maxel + " (occurs " + max + " times)");
+		
+		//take number as an ip
+		System.out.println("Enter how many numbers you want to input :");
+		int ip=sc.nextInt();
+		System.out.println("Enter the numbers : ");
+		for(int i=0;i<ip;i++){
+		    int num=sc.nextInt();
+		    System.out.println(hash[num]);
+		}
+	}
+}
